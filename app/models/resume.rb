@@ -1,2 +1,4 @@
 class Resume < ApplicationRecord
-end
+    validates :name, :email, presence: true
+  end
+  
