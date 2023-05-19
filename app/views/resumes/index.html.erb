@@ -1,0 +1,21 @@
+<h1>Resumes</h1>
+
+<%= link_to 'New Resume', new_resume_path %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Actions</th>
+  </tr>
+
+  <% @resumes.each do |resume| %>
+    <tr>
+      <td><%= resume.name %></td>
+      <td><%= resume.email %></td>
+      <td><%= resume.phone %></td>
+      <td><%= link_to 'View', resume_path(resume) %></td>
+    </tr>
+  <% end %>
+</table>
