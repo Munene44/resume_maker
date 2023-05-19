@@ -1,0 +1,23 @@
+<h1>New Resume</h1>
+
+<%= form_with model: @resume, url: resumes_path, method: :post do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+
+  <%= form.label :email %>
+  <%= form.email_field :email %>
+
+  <%= form.label :phone %>
+  <%= form.text_field :phone %>
+
+  <%= form.label :summary %>
+  <%= form.text_area :summary %>
+
+  <%= form.label :education %>
+  <%= form.text_area :education %>
+
+  <%= form.label :experience %>
+  <%= form.text_area :experience %>
+
+  <%= form.submit %>
+<% end %>
